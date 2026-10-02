@@ -21,7 +21,7 @@ int main()
    cin >> seat_table;
    
    // process
-  etablereq = float(attendees/seat_table);
+  etablereq = (attendees/seat_table);
   tablereq = ceil(etablereq);
   total_seats = tablereq* seat_table;
   unused = total_seats - attendees;

@@ -1,0 +1,62 @@
+/******************************************************************************
+ 
+Exercise Q10 - Online Store Invoice and Shipping Boxes 
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   // input
+    string product_name;
+    double unit_price, discount, shipfee_box;
+    int quantity, unit_box; 
+    double subtotal, discount_amount, final_amount, exact_boxes, 
+           shipping_total, famount_due;
+    int reqboxes;
+    
+   // result
+   cout << "Enter the product name: ";
+   getline(cin,product_name);
+   cout << "Enter the unit price: ";
+   cin >> unit_price;
+   cout << "Enter the quantity: ";
+   cin >> quantity;
+   cout << "Enter the discount percentage: ";
+   cin >> discount;
+   cout << "Enter the shipping fee per box: ";
+   cin >> shipfee_box;
+   cout << "Enter the units per box: ";
+   cin >> unit_box;
+   
+  // process
+   subtotal = unit_price*quantity;
+   discount_amount = subtotal*(discount/100);
+   final_amount = subtotal - discount_amount;
+   exact_boxes = (float) quantity/unit_box;
+   reqboxes = ceil(exact_boxes);
+   shipping_total = reqboxes*shipfee_box;
+   famount_due = final_amount + shipping_total;
+   
+   cout << fixed << setprecision(2);
+   
+   cout << "\n**Online Store Invoice and Shipping Boxes**"<< endl;
+   
+   cout << "Product: " << product_name << endl;
+   cout << "Unit Price: " << unit_price << endl;
+   cout << "Quantity: " << quantity << endl;
+ 
+   cout << "\nSubtotal: " << subtotal << endl;
+   cout << "Discount: " << discount_amount << endl;
+   cout << "Merchandise: " << final_amount << endl;
+   cout << "Exact: " << exact_boxes << endl;
+   cout << "Boxes: " << reqboxes << endl;
+   cout << "Shipping: " << shipping_total << endl;
+   cout << "Amount due: " << famount_due << endl;
+  
+    return 0;
+}

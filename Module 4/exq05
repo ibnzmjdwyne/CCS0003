@@ -11,8 +11,8 @@ using namespace std;
 int main()
 {
    // input
-   double attendees, seat_table;
-   double etablereq, tablereq, total_seats, unused;
+   int attendees, seat_table;
+   int tablereq, total_seats, unused;
   
    //result
    cout << "Enter the number of attendees: ";
@@ -21,7 +21,7 @@ int main()
    cin >> seat_table;
    
    // process
-  etablereq = (attendees/seat_table);
+  double etablereq = static_cast<double>(attendees)/seat_table;
   tablereq = ceil(etablereq);
   total_seats = tablereq* seat_table;
   unused = total_seats - attendees;
@@ -30,9 +30,9 @@ int main()
   
   cout << "\n******Conference Seating Planner******";
   cout << "\nExact tables = " << etablereq << ";";
-  cout << "\nTables required = " << (int)tablereq << "; ";
-  cout << "\nTotal seats = " << (int)total_seats << ";";
-  cout << "\nUnused seats = " << (int)unused;
+  cout << "\nTables required = " << tablereq << "; ";
+  cout << "\nTotal seats = " << total_seats << ";";
+  cout << "\nUnused seats = " << unused;
   
     return 0;
 }

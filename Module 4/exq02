@@ -1,0 +1,43 @@
+/******************************************************************************
+ 
+Exercise Q02 - Scholarship Grade Summary  
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   // input
+   double quiz,lab, project, exam;
+   double w_grade;
+   
+   //result
+   cout << "Enter your Quiz Grade: ";
+   cin >> quiz;
+   cout << "Enter your Laboratory Grade: ";
+   cin >> lab;
+   cout << "Enter your Project Grade: ";
+   cin >> project;
+   cout << "Enter your Examination Grade: ";
+   cin >> exam;
+   
+   // process
+   w_grade =   (quiz*20/100) 
+             + (lab*25/100) 
+             + (project*25/100) 
+             + (exam*30/100);
+   
+   cout << fixed << setprecision(2);
+   
+   cout << "\n******* Grade Summary *******" << endl;
+   cout << "Weighted Grade: " << w_grade << ";";
+   cout << " Rounded: " << (int)round(w_grade) << ";";
+   cout << " Cast to int = " << (int)trunc(w_grade);
+   
+   
+  
+    return 0;
+}

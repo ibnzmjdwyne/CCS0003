@@ -1,0 +1,40 @@
+/******************************************************************************
+ 
+Exercise Q06 - Digital Storage Capacity Report 
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   // input
+   double kb, mb, gb ;
+   long long file_size, whole_mb;
+   
+   // result
+  cout << "Enter a file size in bytes: ";
+  cin >> file_size;
+  
+  // process
+  kb = file_size/1024;
+  mb = kb/1024;
+  gb = mb/1024;
+  whole_mb = mb;
+  
+  
+  cout << fixed << setprecision(2);
+  
+  cout << "KB = " << kb << ";" << endl;
+  cout << "MB = " << mb << ";" << endl;
+  
+  cout << fixed << setprecision(4);
+  cout << "GB = " << gb << ';' << endl;
+  
+  cout << "Whole MB = " << whole_mb << endl;
+  
+  
+    return 0;
+}

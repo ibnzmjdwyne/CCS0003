@@ -1,0 +1,38 @@
+/******************************************************************************
+ 
+Exercise Q05 - Conference Seating Planner  
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+   // input
+   double attendees, seat_table;
+   double etablereq, tablereq, total_seats, unused;
+  
+   //result
+   cout << "Enter the number of attendees: ";
+   cin >> attendees;
+   cout << "Enter the seats per table: ";
+   cin >> seat_table;
+   
+   // process
+  etablereq = float(attendees/seat_table);
+  tablereq = ceil(etablereq);
+  total_seats = tablereq* seat_table;
+  unused = total_seats - attendees;
+  
+  cout << fixed << setprecision(2);
+  
+  cout << "\n******Conference Seating Planner******";
+  cout << "\nExact tables = " << etablereq << ";";
+  cout << "\nTables required = " << (int)tablereq << "; ";
+  cout << "\nTotal seats = " << (int)total_seats << ";";
+  cout << "\nUnused seats = " << (int)unused;
+  
+    return 0;
+}

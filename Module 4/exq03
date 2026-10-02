@@ -1,0 +1,48 @@
+/******************************************************************************
+ 
+Exercise Q03 - Ride-Sharing Fare Split  
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+   // input
+   double base_fare,km ,rate_km, toll_fee,bookfee,nofpas;
+   double distcharge,pftotal,grandtotal,perpassenger;
+  
+   //result
+   cout << "Enter the base fare: ";
+   cin >> base_fare;
+   cout << "Enter the distance in kilometers: ";
+   cin >> km;
+   cout << "Enter the rate per distance: ";
+   cin >> rate_km;
+   cout << "Enter the toll fee: ";
+   cin >> toll_fee;
+   cout << "Enter the booking-fee percentage: ";
+   cin >> bookfee;
+   cout << "Enter the number of passengers: ";
+   cin >> nofpas;
+   
+   // process
+   distcharge = km*rate_km;
+   pftotal = base_fare + distcharge + toll_fee;
+   bookfee = bookfee/100 * pftotal;
+   grandtotal = bookfee + pftotal;
+   perpassenger = grandtotal/nofpas;
+   
+   cout << fixed << setprecision(2);
+   
+   cout << "\n****Ride Sharing Fare Split****";
+   cout << "\nDistance Charge = " << distcharge << "; ";
+   cout << "\nPre-fee = " << pftotal << "; ";
+   cout << "\nBooking fee = " << bookfee << "; ";
+   cout << "\nTotal = " << grandtotal << "; ";
+   cout << "\nPer passenger = " << perpassenger;
+  
+  
+    return 0;
+}

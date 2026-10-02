@@ -10,7 +10,8 @@ using namespace std;
 int main()
 {
    // input
-   double base_fare,km ,rate_km, toll_fee,bookfee,nofpas;
+   double base_fare,km ,rate_km, toll_fee,bookfee;
+   int nofpas
    double distcharge,pftotal,grandtotal,perpassenger;
   
    //result

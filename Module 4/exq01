@@ -1,5 +1,5 @@
 /******************************************************************************
-Exercise Q01 - Campus Canteen Group Order  
+Exercise Q01 - Campus Canteen Group Order              
 *******************************************************************************/
 #include <iostream>
 #include <iomanip>
@@ -30,7 +30,7 @@ int main()
     
     cout << fixed << setprecision(2);
     
-    cout<< "*******Student Receipt*******"<< endl;
+    cout<< "\n*******Student Receipt*******"<< endl;
     cout<< "Subtotal = "<< subtotal << endl;
     cout<< "Service Charge =" <<service_sc << endl;
     cout<< "Final Bill = " << finalbill << endl;
